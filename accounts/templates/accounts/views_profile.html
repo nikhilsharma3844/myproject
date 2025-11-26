@@ -1,0 +1,15 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+<h2> view Profile Picture </h2>
+
+<ul>
+    {% for profile in profiles  %}
+    <li>
+        {{ profile.name }}
+        <img src ="{{ profile.image.url }}" widht = "200">
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
